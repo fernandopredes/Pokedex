@@ -48,8 +48,10 @@ btnPrev.addEventListener('click', ()=>{
 })
 
 btnNext.addEventListener('click', ()=>{
-  searchPokemon += 1;
-  renderPokemon(searchPokemon)
+  if (searchPokemon <= 648) {
+    searchPokemon += 1;
+    renderPokemon(searchPokemon)
+  }
 })
 
 renderPokemon(searchPokemon);
