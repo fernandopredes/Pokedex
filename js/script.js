@@ -55,3 +55,4 @@ btnNext.addEventListener('click', ()=>{
 })
 
 renderPokemon(searchPokemon);
+
