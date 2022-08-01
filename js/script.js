@@ -21,7 +21,7 @@ const renderPokemon = async (pokemon) => {
   pokemonNumber.innerHTML = ''
   const data = await fetchPokemon(pokemon);
 
-  if (data) {
+  if (data && data.id < 650) {
     pokemonName.innerHTML = data.name
     pokemonNumber.innerHTML = data.id
     pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
@@ -55,4 +55,3 @@ btnNext.addEventListener('click', ()=>{
 })
 
 renderPokemon(searchPokemon);
-
